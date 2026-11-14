@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+
+actor "Étudiant" as Etudiant
+actor "Bibliothécaire" as Bibliothecaire
+actor "Responsable" as Responsable
+
+rectangle "Système de gestion de la bibliothèque" {
+usecase "UC4 Consulter la disponibilité (EF4, ENF2)" as UC4
+usecase "UC6 Gérer le catalogue et les emprunteurs (EF6)" as UC6
+usecase "UC1 Enregistrer un prêt (EF1)" as UC1
+usecase "UC2 Enregistrer un retour (EF2)" as UC2
+usecase "UC3 Rechercher l'emprunteur d'un livre (EF3, ENF1)" as UC3
+usecase "UC5 Obtenir les statistiques mensuelles (EF5)" as UC5
+usecase "UC0 S'authentifier (ENF3)" as UC0
+}
+
+Etudiant --> UC4
+
+Bibliothecaire --> UC4
+Bibliothecaire --> UC6
+Bibliothecaire --> UC1
+Bibliothecaire --> UC2
+Bibliothecaire --> UC3
+
+Responsable --> UC5
+
+UC6 ..> UC0 : <>
+UC1 ..> UC0 : <>
+UC2 ..> UC0 : <>
+@enduml

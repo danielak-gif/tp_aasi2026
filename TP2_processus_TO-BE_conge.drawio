@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="tobe-conge" name="Processus TO-BE">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="lane1" value="Employé" style="swimlane;horizontal=0;startSize=26;html=1;whiteSpace=wrap;fontStyle=1;fontSize=9;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="946" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Système" style="swimlane;horizontal=0;startSize=26;html=1;whiteSpace=wrap;fontStyle=1;fontSize=9;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="134" width="946" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" value="Responsable" style="swimlane;horizontal=0;startSize=26;html=1;whiteSpace=wrap;fontStyle=1;fontSize=9;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="288" width="946" height="101" as="geometry" />
+        </mxCell>
+
+        <mxCell id="start" value="Besoin&#xa;de congé" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="76" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" value="Saisir la demande en ligne" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="124" y="66" width="88" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="end1" value="Demande refusée" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=middle;labelPosition=right;labelBackgroundColor=none;verticalAlign=middle;align=left;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="343" y="75" width="24" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="Vérifier automatiquement le solde" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="221" y="190" width="88" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="gwA" value="Solde suffisant ?" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="336" y="192" width="38" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="gwP1" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=parallel;" vertex="1" parent="1">
+          <mxGeometry x="423" y="192" width="38" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="Notifier le responsable (alerte + planning)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="496" y="150" width="88" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" value="Bloquer provisoirement les jours au planning" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="496" y="230" width="88" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="gwP2" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=parallel;" vertex="1" parent="1">
+          <mxGeometry x="618" y="192" width="38" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" value="Mettre à jour solde et planning, notifier l'employé et les RH" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="781" y="190" width="88" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="end2" value="Congé accordé" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="199" width="24" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" value="Valider ou refuser sous 48 h" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="687" y="317" width="88" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="gwB" value="Demande acceptée ?" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="805" y="319" width="38" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="end3" value="Demande refusée" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="326" width="24" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="start" target="t1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="t1" target="t2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="t2" target="gwA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="Incomplet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gwA" target="end1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="Complet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="gwA" target="gwP1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gwP1" target="t3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gwP1" target="t4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="t3" target="gwP2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="t4" target="gwP2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gwP2" target="t6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="t6" target="gwB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="Complet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gwB" target="t5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="Incomplet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;fontStyle=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="gwB" target="end3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="t5" target="end2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

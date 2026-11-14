@@ -1,0 +1,105 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="asis-conge" name="Processus AS-IS">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="lane1" value="Employé" style="swimlane;horizontal=0;startSize=26;html=1;whiteSpace=wrap;fontStyle=1;fontSize=9;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="947" height="87" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Responsable" style="swimlane;horizontal=0;startSize=26;html=1;whiteSpace=wrap;fontStyle=1;fontSize=9;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="127" width="947" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" value="Service RH" style="swimlane;horizontal=0;startSize=26;html=1;whiteSpace=wrap;fontStyle=1;fontSize=9;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="215" width="947" height="145" as="geometry" />
+        </mxCell>
+
+        <mxCell id="start" value="Besoin&#xa;de congé" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="76" y="73" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" value="Remplir le formulaire papier" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="118" y="64" width="83" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="Déposer le formulaire chez le responsable" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="210" y="64" width="81" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="Vérifier le planning de l'équipe" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="151" width="82" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gw1" value="Période compatible ?" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="405" y="154" width="34" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" value="Signer et transmettre à RH" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="485" y="151" width="82" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" value="Vérifier le solde dans Excel" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="573" y="239" width="82" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gw2" value="Solde suffisant ?" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=top;labelBackgroundColor=#ffffff;verticalAlign=bottom;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="674" y="242" width="34" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" value="Enregistrer le congé et mettre à jour le planning" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="748" y="237" width="82" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" value="Informer l'employé" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="839" y="239" width="82" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="end1" value="Congé accordé" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="934" y="247" width="24" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" value="Informer l'employé du refus" style="rounded=1;whiteSpace=wrap;html=1;fontSize=9;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="651" y="302" width="82" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="end2" value="Demande refusée" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="777" y="310" width="24" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="start" target="t1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="t1" target="t2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="t2" target="t3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="t3" target="gw1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="Complet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="gw1" target="t4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="Incomplet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gw1" target="t1">
+          <mxGeometry x="0.2" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="422" y="53" />
+              <mxPoint x="160" y="53" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="t4" target="t5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="t5" target="gw2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="Complet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="gw2" target="t6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="t6" target="t7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="t7" target="end1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="Incomplet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gw2" target="t8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="t8" target="end2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
